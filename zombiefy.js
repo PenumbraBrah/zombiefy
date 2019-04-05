@@ -16,15 +16,15 @@ $(function() {
     var length = lengths.shift();
     lengths.push(length);
     title.text(period);
-    title.css("color", endcolor);
+    title.css({ "color": endcolor, "font-size": "300%" });
     circle.circleProgress({
       value: 1,
-      size: 100,
+      size: 300,
       fill: {
         gradient: [startcolor, endcolor]
       },
       animation: {
-        duration: length*1000,
+        duration: length*30000,
         complete: render
       }
     });
